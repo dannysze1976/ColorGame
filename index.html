@@ -1,177 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>3Sedges</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
-    }
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+  }
 
-    header {
-      background-color: #ffffff;
-      color: #ef6c00;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
+  header {
+    background-color: #ffffff;
+    color: #ef6c00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
 
-    header img {
-      width: 50px;
-      margin-bottom: 10px;
-    }
+  /* Make header a flex container */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+  }
 
-    h1 {
-      margin: 0;
-      font-size: 3em;
-    }
+  /* Adjust logo width to be proportional to the text width */
+  header img {
+    width: 20%; /* Adjust this percentage to fit your design */
+    margin-bottom: 10px;
+    max-width: 150px; /* Set a maximum width to prevent the logo from becoming too large */
+  }
 
-    .content {
-      max-width: 900px;
-      margin: 0 auto;
-    }
+  h1 {
+    margin: 0;
+    font-size: 3em;
+    text-align: center;
+  }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      background-color: #fff3e0;
-      border-bottom: 2px solid #ffe0b2;
-    }
+  .content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 
-    nav a {
-      flex: 1;
-      text-align: center;
-      padding: 15px 0;
-      color: white;
-      text-decoration: none;
-      font-size: 1.1em;
-      font-weight: bold;
-      cursor: pointer;
-    }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff3e0;
+    border-bottom: 2px solid #ffe0b2;
+  }
 
-    .home-tab { background-color: #f57c00; }
-    .solutions-tab { background-color: #fb8c00; }
-    .careers-tab { background-color: #ffa726; }
-    .contact-tab { background-color: #ffb74d; }
+  nav a {
+    flex: 1;
+    text-align: center;
+    padding: 15px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+  }
 
-    nav a:hover {
-      background-color: #e65100 !important;
-    }
+  .home-tab { background-color: #f57c00; }
+  .solutions-tab { background-color: #fb8c00; }
+  .careers-tab { background-color: #ffa726; }
+  .contact-tab { background-color: #ffb74d; }
 
-    main {
-      padding: 20px;
-    }
+  nav a:hover {
+    background-color: #e65100 !important;
+  }
 
-    section {
-      display: none;
-      margin-bottom: 40px;
-    }
+  main {
+    padding: 20px;
+  }
 
-    section.active {
-      display: block;
-    }
+  section {
+    display: none;
+    margin-bottom: 40px;
+  }
 
-    h2 {
-      color: #ef6c00;
-      border-bottom: 2px solid #ffe0b2;
-      padding-bottom: 10px;
-    }
+  section.active {
+    display: block;
+  }
 
-    p {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
+  h2 {
+    color: #ef6c00;
+    border-bottom: 2px solid #ffe0b2;
+    padding-bottom: 10px;
+  }
 
-    footer {
-      background-color: #ffe0b2;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #5d4037;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="logo_orange.png" alt="3Sedges Logo" />
-    <h1>3Sedges</h1>
-    <p>Driven by DSP Innovation</p>
-  </header>
+  p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
 
-  <div class="content">
-    <nav>
-      <a class="home-tab" onclick="showSection('home')">Home</a>
-      <a class="solutions-tab" onclick="showSection('solutions')">Solutions</a>
-      <a class="careers-tab" onclick="showSection('careers')">Careers</a>
-      <a class="contact-tab" onclick="showSection('contact')">Contact Us</a>
-    </nav>
-
-    <main>
-      <section id="home" class="active">
-        <h2>About Us</h2>
-        <p>
-          3Sedges was founded by a team of Digital Signal Processing (DSP) experts committed to pushing the boundaries of technology.
-          We specialize in developing efficient, scalable, and intelligent DSP solutions for real-world applications. Our focus is on pioneering innovations in **Quantum Computing** and **Edge Computing**, with particular emphasis on transforming the **gaming industry**.
-        </p>
-        <p>
-          In the realm of **Quantum Computing**, we are exploring the power of quantum algorithms to tackle the complex and computationally intensive challenges faced by modern game development. Quantum computing has the potential to revolutionize gaming by dramatically increasing computational power, enabling faster processing of in-game environments, complex physics simulations, and AI behaviors. With quantum-enhanced algorithms, we can enable real-time, highly detailed graphics, more dynamic game worlds, and adaptive AI that evolves with player behavior in ways that were once thought impossible.
-        </p>
-        <p>
-          At the same time, **Edge Computing** is reshaping how games are delivered and experienced. By moving data processing closer to the player through edge servers, we can reduce latency and improve overall performance in real-time multiplayer gaming, virtual reality (VR), and augmented reality (AR) experiences. Edge computing enables faster load times, more responsive gameplay, and enhanced immersive experiences by processing game data locally, reducing the reliance on distant cloud servers. This is especially crucial in competitive gaming, where milliseconds matter, and in multiplayer environments where seamless communication between players is essential.
-        </p>
-        <p>
-          At 3Sedges, we integrate both quantum and edge computing into our DSP solutions for gaming, empowering game developers to push the limits of what’s possible. From ultra-responsive game environments to AI that adapts intelligently and quantum-accelerated rendering, our innovative solutions ensure a new era of immersive, high-performance gaming that’s not just about better graphics but smarter, more engaging gameplay.
-        </p>
-      </section>
-
-     <section id="solutions">
-  <h2>Solutions</h2>
-  <p>
-    At 3Sedges, we specialize in applying Digital Signal Processing (DSP) to Quantum Computing and Edge Computing to create innovative solutions for a wide range of industries. Our technologies push the limits of real-time data processing, ensuring that organizations can harness the power of next-gen computing.
-  </p>
-  <p>
-    In the realm of **Quantum Computing**, DSP is crucial in optimizing quantum algorithms for complex computations. We leverage DSP to accelerate quantum signal processing, enabling faster and more accurate data analysis, which is especially vital for industries like finance, where complex modeling and simulation are essential. DSP's role in improving quantum error correction also ensures higher fidelity and reliability, bringing quantum computing closer to practical, real-world applications.
-  </p>
-  <p>
-    For **Edge Computing**, DSP allows for the efficient processing of data closer to the source, significantly reducing latency and bandwidth usage. By utilizing DSP at the edge, industries like manufacturing, automotive, and smart cities benefit from faster decision-making and more reliable, real-time monitoring. In automotive, for example, DSP helps process sensor data for autonomous vehicles, ensuring fast, low-latency responses for safety-critical systems. Similarly, in smart cities, DSP-enabled edge devices process data from sensors in real time, enabling more efficient traffic management and improved environmental monitoring.
-  </p>
-  <p>
-    Our solutions extend across telecommunications, where DSP optimizes network traffic and signal processing, and audio processing, where DSP enhances sound quality and real-time audio applications. In IoT, DSP integrates seamlessly into connected devices, enabling smarter, faster, and more energy-efficient interactions.
-  </p>
-  <p>
-    By integrating DSP with **Quantum Computing** and **Edge Computing**, 3Sedges delivers transformative solutions that enable industries to meet the growing demands of real-time data processing, smarter decision-making, and next-level performance.
-  </p>
-</section>
-
-      <section id="careers">
-        <h2>Our Team</h2>
-        <p>We're a passionate and growing group of DSP innovators. Stay tuned for opportunities to join us!</p>
-      </section>
-
-      <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:contact@3sedges.com">contact@3sedges.com</a></p>
-      </section>
-    </main>
-
-    <footer>
-      &copy; 2025 3Sedges. All rights reserved.
-    </footer>
-  </div>
-
-  <script>
-    function showSection(sectionId) {
-      const sections = document.querySelectorAll("main section");
-      sections.forEach(section => {
-        section.classList.remove("active");
-      });
-      document.getElementById(sectionId).classList.add("active");
-    }
-  </script>
-</body>
-</html>
+  footer {
+    background-color: #ffe0b2;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #5d4037;
+  }
+</style>
