@@ -3,36 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>3Sedges</title>
+  <title>3edges</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background-color: #f9f9f9;
-      display: flex;
-    }
-
-    nav {
-      width: 200px;
-      background-color: #2e7d32;
-      min-height: 100vh;
-      padding-top: 40px;
-    }
-
-    nav a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      padding: 15px 20px;
-      font-size: 1.1em;
-    }
-
-    nav a:hover {
-      background-color: #1b5e20;
-    }
-
-    .content {
-      flex-grow: 1;
     }
 
     header {
@@ -47,9 +23,41 @@
       font-size: 3em;
     }
 
-    main {
+    .content {
       max-width: 900px;
       margin: 0 auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      background-color: #e8f5e9;
+      padding: 0;
+      margin-top: -10px;
+      border-bottom: 2px solid #c8e6c9;
+    }
+
+    nav a {
+      flex: 1;
+      text-align: center;
+      padding: 15px 0;
+      color: white;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    /* Different colors for each tab */
+    .home-tab { background-color: #388e3c; }
+    .solutions-tab { background-color: #43a047; }
+    .careers-tab { background-color: #4caf50; }
+    .contact-tab { background-color: #66bb6a; }
+
+    nav a:hover {
+      background-color: #1b5e20 !important;
+    }
+
+    main {
       padding: 20px;
     }
 
@@ -77,24 +85,24 @@
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Solutions</a>
-    <a href="#">Careers</a>
-    <a href="#">Contact Us</a>
-  </nav>
+  <header>
+    <h1>3edges</h1>
+    <p>Driven by DSP Innovation</p>
+  </header>
 
   <div class="content">
-    <header>
-      <h1>3Sedges</h1>
-      <p>Driven by DSP Innovation</p>
-    </header>
+    <nav>
+      <a href="#" class="home-tab">Home</a>
+      <a href="#" class="solutions-tab">Solutions</a>
+      <a href="#" class="careers-tab">Careers</a>
+      <a href="#" class="contact-tab">Contact Us</a>
+    </nav>
 
     <main>
       <section id="about">
         <h2>About Us</h2>
         <p>
-          3Sedges was founded by a team of Digital Signal Processing (DSP) experts committed to pushing the boundaries of technology.
+          3edges was founded by a team of Digital Signal Processing (DSP) experts committed to pushing the boundaries of technology.
           We specialize in developing efficient, scalable, and intelligent DSP solutions for real-world applications.
         </p>
       </section>
@@ -106,12 +114,12 @@
 
       <section id="contact">
         <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:contact@3sedges.com">contact@3sedges.com</a></p>
+        <p>Email: <a href="mailto:contact@3edges.com">contact@3edges.com</a></p>
       </section>
     </main>
 
     <footer>
-      &copy; 2025 3Sedges. All rights reserved.
+      &copy; 2025 3edges. All rights reserved.
     </footer>
   </div>
 </body>
