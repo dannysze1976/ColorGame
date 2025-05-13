@@ -9,37 +9,65 @@
       font-family: Arial, sans-serif;
       margin: 0;
       background-color: #f9f9f9;
+      display: flex;
     }
+
+    nav {
+      width: 200px;
+      background-color: #2e7d32;
+      min-height: 100vh;
+      padding-top: 40px;
+    }
+
+    nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      font-size: 1.1em;
+    }
+
+    nav a:hover {
+      background-color: #1b5e20;
+    }
+
+    .content {
+      flex-grow: 1;
+    }
+
     header {
       background-color: #2e7d32;
       color: white;
       text-align: center;
       padding: 40px 20px;
     }
+
     h1 {
       margin: 0;
       font-size: 3em;
     }
+
     main {
       max-width: 900px;
       margin: 0 auto;
       padding: 20px;
     }
+
     section {
       margin-bottom: 40px;
     }
+
     h2 {
       color: #2e7d32;
       border-bottom: 2px solid #c8e6c9;
       padding-bottom: 10px;
     }
+
     p {
       font-size: 1.1em;
       line-height: 1.6;
     }
-    .team-list li {
-      margin-bottom: 10px;
-    }
+
     footer {
       background-color: #e0e0e0;
       text-align: center;
@@ -49,38 +77,42 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>3Sedges</h1>
-    <p>Driven by DSP Innovation</p>
-  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Solutions</a>
+    <a href="#">Careers</a>
+    <a href="#">Contact Us</a>
+  </nav>
 
-  <main>
-    <section id="about">
-      <h2>About Us</h2>
-      <p>
-        3Sedges was founded by a team of Digital Signal Processing (DSP) experts committed to pushing the boundaries of technology.
-        We specialize in developing efficient, scalable, and intelligent DSP solutions for real-world applications.
-      </p>
-    </section>
+  <div class="content">
+    <header>
+      <h1>3Sedges</h1>
+      <p>Driven by DSP Innovation</p>
+    </header>
 
-    <section id="team">
-      <h2>Our Team</h2>
-      <ul class="team-list">
-        <li><strong>Alex Chan</strong> – DSP Architect</li>
-        <li><strong>Rachel Wong</strong> – Algorithm Developer</li>
-        <li><strong>Jason Liu</strong> – Embedded Systems Engineer</li>
-        <li><strong>You?</strong> – We’re growing!</li>
-      </ul>
-    </section>
+    <main>
+      <section id="about">
+        <h2>About Us</h2>
+        <p>
+          3Sedges was founded by a team of Digital Signal Processing (DSP) experts committed to pushing the boundaries of technology.
+          We specialize in developing efficient, scalable, and intelligent DSP solutions for real-world applications.
+        </p>
+      </section>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Email: <a href="mailto:contact@3sedges.com">contact@3sedges.com</a></p>
-    </section>
-  </main>
+      <section id="team">
+        <h2>Our Team</h2>
+        <p>We're a passionate and growing group of DSP innovators. Stay tuned for opportunities to join us!</p>
+      </section>
 
-  <footer>
-    &copy; 2025 3Sedges. All rights reserved.
-  </footer>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:contact@3sedges.com">contact@3sedges.com</a></p>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2025 3Sedges. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
