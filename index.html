@@ -55,6 +55,7 @@
     }
 
     .home-tab { background-color: #f57c00; }
+    .philosophy-tab { background-color: #fb8c00; }
     .solutions-tab { background-color: #fb8c00; }
     .careers-tab { background-color: #ffa726; }
     .contact-tab { background-color: #ffb74d; }
@@ -94,6 +95,11 @@
       font-size: 0.9em;
       color: #5d4037;
     }
+
+    /* Apply bold to emphasized words */
+    .bold {
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -106,10 +112,10 @@
   <div class="content">
     <nav>
       <a class="home-tab" onclick="showSection('home')">Home</a>
+      <a class="philosophy-tab" onclick="showSection('philosophy')">Philosophy</a> <!-- Moved Philosophy Tab -->
       <a class="solutions-tab" onclick="showSection('solutions')">Solutions</a>
       <a class="careers-tab" onclick="showSection('careers')">Careers</a>
       <a class="contact-tab" onclick="showSection('contact')">Contact Us</a>
-      <a class="philosophy-tab" onclick="showSection('philosophy')">Philosophy</a> <!-- New Tab -->
     </nav>
 
     <main>
@@ -117,57 +123,13 @@
         <h2>About Us</h2>
         <p>
           3Sedges was founded by a team of Digital Signal Processing (DSP) experts committed to pushing the boundaries of technology.
-          We specialize in developing efficient, scalable, and intelligent DSP solutions for real-world applications. Our focus is on pioneering innovations in **Quantum Computing** and **Edge Computing**, with particular emphasis on transforming the **gaming industry**.
-        </p>
-        <!-- The rest of the content remains unchanged -->
-      </section>
-
-      <!-- Philosophy Section Added -->
-      <section id="philosophy">
-        <h2>The Philosophy of 3Sedges</h2>
-        <p>
-          At the core of **3Sedges** lies a simple yet profound philosophy: the belief that the future belongs to those who have the freedom to innovate, create, and explore without boundaries. In this context, **"3"** stands for **"Frees"**, a term that symbolizes the ultimate freedom—freedom to access, utilize, and shape cutting-edge technology.
+          We specialize in developing efficient, scalable, and intelligent DSP solutions for real-world applications. Our focus is on pioneering innovations in <span class="bold">Quantum Computing</span> and <span class="bold">Edge Computing</span>, with particular emphasis on transforming the <span class="bold">gaming industry</span>.
         </p>
         <p>
-          When pronounced, **"3Sedges"** resonates with the sound of **"three"**, echoing the idea that there is more than one path to innovation. The **"Sedges"** refers to the **edges** of technology—the forefront, where the sharpest, most transformative advancements reside. Together, **3Sedges** represents the fusion of freedom and innovation, with **"Frees"** signifying the unrestricted, open nature of technology that fuels progress for all.
+          In the realm of <span class="bold">Quantum Computing</span>, we are exploring the power of quantum algorithms to tackle the complex and computationally intensive challenges faced by modern game development. Quantum computing has the potential to revolutionize gaming by dramatically increasing computational power, enabling faster processing of in-game environments, complex physics simulations, and AI behaviors. With quantum-enhanced algorithms, we can enable real-time, highly detailed graphics, more dynamic game worlds, and adaptive AI that evolves with player behavior in ways that were once thought impossible.
         </p>
         <p>
-          In a world where access to advanced technology often comes with barriers—be it cost, exclusivity, or complexity—**3Sedges** proposes a new way of thinking. It’s not just about making technology available; it’s about making it free in the truest sense of the word—**open**, **inclusive**, and **empowering**. **"Frees"** means that technology is liberated from restrictions, allowing it to flow freely across communities and industries, fostering collaboration and new opportunities.
+          At the same time, <span class="bold">Edge Computing</span> is reshaping how games are delivered and experienced. By moving data processing closer to the player through edge servers, we can reduce latency and improve overall performance in real-time multiplayer gaming, virtual reality (VR), and augmented reality (AR) experiences. Edge computing enables faster load times, more responsive gameplay, and enhanced immersive experiences by processing game data locally, reducing the reliance on distant cloud servers. This is especially crucial in competitive gaming, where milliseconds matter, and in multiplayer environments where seamless communication between players is essential.
         </p>
         <p>
-          Through **3Sedges**, we advocate for a future where innovation knows no limits, where the cutting edge is not confined to the elite but is open to anyone with the curiosity and drive to explore. The philosophy of **3Sedges** is about creating a space where technology can be freely shaped and shared, empowering individuals and organizations alike to push the boundaries of what is possible.
-        </p>
-      </section>
-
-      <section id="solutions">
-        <h2>Solutions</h2>
-        <p> <!-- Solutions content remains unchanged --> </p>
-      </section>
-
-      <section id="careers">
-        <h2>Our Team</h2>
-        <p>We're a passionate and growing group of DSP innovators. Stay tuned for opportunities to join us!</p>
-      </section>
-
-      <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:contact@3sedges.com">contact@3sedges.com</a></p>
-      </section>
-    </main>
-
-    <footer>
-      &copy; 2025 3Sedges. All rights reserved.
-    </footer>
-  </div>
-
-  <script>
-    function showSection(sectionId) {
-      const sections = document.querySelectorAll("main section");
-      sections.forEach(section => {
-        section.classList.remove("active");
-      });
-      document.getElementById(sectionId).classList.add("active");
-    }
-  </script>
-</body>
-</html>
+          At 3
