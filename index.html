@@ -15,34 +15,20 @@
       background-color: #ffffff;
       color: #ef6c00;
       display: flex;
-      align-items: flex-start; /* Align items at the start */
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       padding: 20px;
-      position: relative; /* Needed for absolute positioning of subtext */
-      height: 120px; /* Adjust height as needed */
     }
 
     header img {
       width: 50px;
-      margin-right: 20px; /* Space between logo and text */
+      margin-bottom: 10px;
     }
 
     h1 {
       margin: 0;
       font-size: 3em;
-    }
-
-    p {
-      position: absolute;
-      bottom: 0; /* Align text to the bottom of the header */
-      margin-left: 20px; /* Space between the title and the 'Driven by DSP Innovation' text */
-      font-size: 1.1em;
-      color: #ef6c00;
-    }
-
-    /* Apply subscript to the 'Driven by DSP Innovation' text */
-    p sub {
-      font-size: 0.8em;
-      vertical-align: sub;
     }
 
     .content {
@@ -70,9 +56,9 @@
 
     .home-tab { background-color: #f57c00; }
     .philosophy-tab { background-color: #fb8c00; }
-    .solutions-tab { background-color: #fb8c00; }
-    .careers-tab { background-color: #ffa726; }
-    .contact-tab { background-color: #ffb74d; }
+    .solutions-tab { background-color: #ffa726; }
+    .careers-tab { background-color: #ffb74d; }
+    .contact-tab { background-color: #ffe0b2; color: #5d4037; }
 
     nav a:hover {
       background-color: #e65100 !important;
@@ -109,26 +95,18 @@
       font-size: 0.9em;
       color: #5d4037;
     }
-
-    /* Apply bold to emphasized words */
-    .bold {
-      font-weight: bold;
-    }
   </style>
 </head>
 <body>
   <header>
     <img src="logo_orange.png" alt="3Sedges Logo" />
-    <div>
-      <h1>3Sedges</h1>
-    </div>
-    <p>Driven by DSP Innovation<sub> </sub></p> <!-- 'Driven by DSP Innovation' as subscript -->
+    <h1>3Sedges</h1>
   </header>
 
   <div class="content">
     <nav>
       <a class="home-tab" onclick="showSection('home')">Home</a>
-      <a class="philosophy-tab" onclick="showSection('philosophy')">Philosophy</a> <!-- Moved Philosophy Tab -->
+      <a class="philosophy-tab" onclick="showSection('philosophy')">Philosophy</a>
       <a class="solutions-tab" onclick="showSection('solutions')">Solutions</a>
       <a class="careers-tab" onclick="showSection('careers')">Careers</a>
       <a class="contact-tab" onclick="showSection('contact')">Contact Us</a>
@@ -139,39 +117,49 @@
         <h2>About Us</h2>
         <p>
           3Sedges was founded by a team of Digital Signal Processing (DSP) experts committed to pushing the boundaries of technology.
-          We specialize in developing efficient, scalable, and intelligent DSP solutions for real-world applications. Our focus is on pioneering innovations in <span class="bold">Quantum Computing</span> and <span class="bold">Edge Computing</span>, with particular emphasis on transforming the <span class="bold">gaming industry</span>.
+          We specialize in developing efficient, scalable, and intelligent DSP solutions for real-world applications. Our focus is on pioneering innovations in <strong>Quantum Computing</strong> and <strong>Edge Computing</strong>, with particular emphasis on transforming the <strong>gaming industry</strong>.
         </p>
         <p>
-          In the realm of <span class="bold">Quantum Computing</span>, we are exploring the power of quantum algorithms to tackle the complex and computationally intensive challenges faced by modern game development. Quantum computing has the potential to revolutionize gaming by dramatically increasing computational power, enabling faster processing of in-game environments, complex physics simulations, and AI behaviors. With quantum-enhanced algorithms, we can enable real-time, highly detailed graphics, more dynamic game worlds, and adaptive AI that evolves with player behavior in ways that were once thought impossible.
+          In the realm of <strong>Quantum Computing</strong>, we are exploring the power of quantum algorithms to tackle the complex and computationally intensive challenges faced by modern game development. Quantum computing has the potential to revolutionize gaming by dramatically increasing computational power, enabling faster processing of in-game environments, complex physics simulations, and AI behaviors.
         </p>
         <p>
-          At the same time, <span class="bold">Edge Computing</span> is reshaping how games are delivered and experienced. By moving data processing closer to the player through edge servers, we can reduce latency and improve overall performance in real-time multiplayer gaming, virtual reality (VR), and augmented reality (AR) experiences. Edge computing enables faster load times, more responsive gameplay, and enhanced immersive experiences by processing game data locally, reducing the reliance on distant cloud servers. This is especially crucial in competitive gaming, where milliseconds matter, and in multiplayer environments where seamless communication between players is essential.
+          At the same time, <strong>Edge Computing</strong> is reshaping how games are delivered and experienced. By moving data processing closer to the player through edge servers, we can reduce latency and improve overall performance in real-time multiplayer gaming, virtual reality (VR), and augmented reality (AR) experiences.
         </p>
         <p>
-          At 3Sedges, we integrate both quantum and edge computing into our DSP solutions for gaming, empowering game developers to push the limits of what’s possible. From ultra-responsive game environments to AI that adapts intelligently and quantum-accelerated rendering, our innovative solutions ensure a new era of immersive, high-performance gaming that’s not just about better graphics but smarter, more engaging gameplay.
+          At 3Sedges, we integrate both quantum and edge computing into our DSP solutions for gaming, empowering game developers to push the limits of what’s possible. From ultra-responsive game environments to AI that adapts intelligently and quantum-accelerated rendering, our innovative solutions ensure a new era of immersive, high-performance gaming.
         </p>
       </section>
 
-      <!-- Philosophy Section Added -->
       <section id="philosophy">
         <h2>The Philosophy of 3Sedges</h2>
         <p>
-          At the core of <span class="bold">3Sedges</span> lies a simple yet profound philosophy: the belief that the future belongs to those who have the freedom to innovate, create, and explore without boundaries. In this context, <span class="bold">"3"</span> stands for <span class="bold">"Frees"</span>, a term that symbolizes the ultimate freedom—freedom to access, utilize, and shape cutting-edge technology.
+          At the core of <strong>3Sedges</strong> lies a simple yet profound philosophy: the belief that the future belongs to those who have the freedom to innovate, create, and explore without boundaries. In this context, <strong>"3"</strong> stands for <strong>"Frees"</strong>, a term that symbolizes the ultimate freedom—freedom to access, utilize, and shape cutting-edge technology.
         </p>
         <p>
-          When pronounced, <span class="bold">"3Sedges"</span> resonates with the sound of <span class="bold">"three"</span>, echoing the idea that there is more than one path to innovation. The <span class="bold">"Sedges"</span> refers to the <span class="bold">edges</span> of technology—the forefront, where the sharpest, most transformative advancements reside. Together, <span class="bold">3Sedges</span> represents the fusion of freedom and innovation, with <span class="bold">"Frees"</span> signifying the unrestricted, open nature of technology that fuels progress for all.
+          When pronounced, <strong>"3Sedges"</strong> resonates with the sound of <strong>"three"</strong>, echoing the idea that there is more than one path to innovation. The <strong>"Sedges"</strong> refers to the <strong>edges</strong> of technology—the forefront, where the sharpest, most transformative advancements reside. Together, <strong>3Sedges</strong> represents the fusion of freedom and innovation, with <strong>"Frees"</strong> signifying the unrestricted, open nature of technology that fuels progress for all.
         </p>
         <p>
-          In a world where access to advanced technology often comes with barriers—be it cost, exclusivity, or complexity—<span class="bold">3Sedges</span> proposes a new way of thinking. It’s not just about making technology available; it’s about making it free in the truest sense of the word—<span class="bold">open</span>, <span class="bold">inclusive</span>, and <span class="bold">empowering</span>. <span class="bold">"Frees"</span> means that technology is liberated from restrictions, allowing it to flow freely across communities and industries, fostering collaboration and new opportunities.
+          In a world where access to advanced technology often comes with barriers—be it cost, exclusivity, or complexity—<strong>3Sedges</strong> proposes a new way of thinking. It’s not just about making technology available; it’s about making it free in the truest sense of the word—<strong>open</strong>, <strong>inclusive</strong>, and <strong>empowering</strong>.
         </p>
         <p>
-          Through <span class="bold">3Sedges</span>, we advocate for a future where innovation knows no limits, where the cutting edge is not confined to the elite but is open to anyone with the curiosity and drive to explore. The philosophy of <span class="bold">3Sedges</span> is about creating a space where technology can be freely shaped and shared, empowering individuals and organizations alike to push the boundaries of what is possible.
+          Through <strong>3Sedges</strong>, we advocate for a future where innovation knows no limits, where the cutting edge is not confined to the elite but is open to anyone with the curiosity and drive to explore.
         </p>
       </section>
 
       <section id="solutions">
         <h2>Solutions</h2>
-        <p> <!-- Solutions content remains unchanged --> </p>
+        <p>
+          At 3Sedges, we specialize in applying Digital Signal Processing (DSP) to Quantum Computing and Edge Computing to create innovative solutions for a wide range of industries. Our technologies push the limits of real-time data processing, ensuring that organizations can harness the power of next-gen computing.
+        </p>
+        <p>
+          In the realm of <strong>Quantum Computing</strong>, DSP is crucial in optimizing quantum algorithms for complex computations. We leverage DSP to accelerate quantum signal processing, enabling faster and more accurate data analysis.
+        </p>
+        <p>
+          For <strong>Edge Computing</strong>, DSP allows for the efficient processing of data closer to the source, significantly reducing latency and bandwidth usage.
+        </p>
+        <p>
+          By integrating DSP with <strong>Quantum Computing</strong> and <strong>Edge Computing</strong>, 3Sedges delivers transformative solutions that enable industries to meet the growing demands of real-time data processing, smarter decision-making, and next-level performance.
+        </p>
       </section>
 
       <section id="careers">
