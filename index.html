@@ -12,17 +12,18 @@
     }
 
     header {
-      background-color: #ffffff; /* White background */
-      color: #ef6c00; /* Orange text */
+      background-color: #ffffff;
+      color: #ef6c00;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 20px 20px;
+      padding: 20px;
     }
 
     header img {
-      width: 50px; /* Adjust logo size */
-      margin-right: 15px;
+      width: 50px;
+      margin-bottom: 10px;
     }
 
     h1 {
@@ -38,9 +39,7 @@
     nav {
       display: flex;
       justify-content: space-between;
-      background-color: #fff3e0; /* light orange background */
-      padding: 0;
-      margin-top: -10px;
+      background-color: #fff3e0;
       border-bottom: 2px solid #ffe0b2;
     }
 
@@ -52,9 +51,9 @@
       text-decoration: none;
       font-size: 1.1em;
       font-weight: bold;
+      cursor: pointer;
     }
 
-    /* Different orange shades for each tab */
     .home-tab { background-color: #f57c00; }
     .solutions-tab { background-color: #fb8c00; }
     .careers-tab { background-color: #ffa726; }
@@ -69,7 +68,12 @@
     }
 
     section {
+      display: none;
       margin-bottom: 40px;
+    }
+
+    section.active {
+      display: block;
     }
 
     h2 {
@@ -101,14 +105,14 @@
 
   <div class="content">
     <nav>
-      <a href="#" class="home-tab">Home</a>
-      <a href="#" class="solutions-tab">Solutions</a>
-      <a href="#" class="careers-tab">Careers</a>
-      <a href="#" class="contact-tab">Contact Us</a>
+      <a class="home-tab" onclick="showSection('home')">Home</a>
+      <a class="solutions-tab" onclick="showSection('solutions')">Solutions</a>
+      <a class="careers-tab" onclick="showSection('careers')">Careers</a>
+      <a class="contact-tab" onclick="showSection('contact')">Contact Us</a>
     </nav>
 
     <main>
-      <section id="about">
+      <section id="home" class="active">
         <h2>About Us</h2>
         <p>
           3Sedges was founded by a team of Digital Signal Processing (DSP) experts committed to pushing the boundaries of technology.
@@ -116,7 +120,12 @@
         </p>
       </section>
 
-      <section id="team">
+      <section id="solutions">
+        <h2>Solutions</h2>
+        <p>We provide cutting-edge DSP technologies for industries such as telecommunications, audio processing, and embedded systems.</p>
+      </section>
+
+      <section id="careers">
         <h2>Our Team</h2>
         <p>We're a passionate and growing group of DSP innovators. Stay tuned for opportunities to join us!</p>
       </section>
@@ -131,5 +140,15 @@
       &copy; 2025 3Sedges. All rights reserved.
     </footer>
   </div>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll("main section");
+      sections.forEach(section => {
+        section.classList.remove("active");
+      });
+      document.getElementById(sectionId).classList.add("active");
+    }
+  </script>
 </body>
 </html>
