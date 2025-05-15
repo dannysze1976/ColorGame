@@ -28,35 +28,37 @@
 
     h1 {
       margin: 0;
-      font-size: 3em;
+      font-size: 2.5em;
+      text-align: center;
     }
 
     .content {
       max-width: 900px;
       margin: 0 auto;
+      padding: 0 10px;
     }
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       background-color: #fff3e0;
       border-bottom: 2px solid #ffe0b2;
-      flex-wrap: wrap;
     }
 
     nav a {
-      flex: 1;
+      flex: 1 1 50%;
       text-align: center;
       padding: 15px 0;
       color: white;
       text-decoration: none;
-      font-size: 1.1em;
+      font-size: 1em;
       font-weight: bold;
-      cursor: pointer;
+      box-sizing: border-box;
     }
 
     .home-tab { background-color: #f57c00; }
-    .philosophy-tab { background-color: #fb8c00; display: none; } /* hidden */
+    .philosophy-tab { background-color: #fb8c00; display: none; }
     .solutions-tab { background-color: #ffa726; }
     .products-tab { background-color: #ffcc80; color: #5d4037; }
     .careers-tab { background-color: #ffb74d; }
@@ -67,7 +69,7 @@
     }
 
     main {
-      padding: 20px;
+      padding: 20px 0;
     }
 
     section {
@@ -85,9 +87,13 @@
       padding-bottom: 10px;
     }
 
-    p {
-      font-size: 1.1em;
+    p, ul {
+      font-size: 1.05em;
       line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
     }
 
     footer {
@@ -96,6 +102,26 @@
       padding: 20px;
       font-size: 0.9em;
       color: #5d4037;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      nav a {
+        flex: 1 1 100%;
+        font-size: 1em;
+        padding: 12px 0;
+      }
+
+      .content {
+        padding: 0 15px;
+      }
+
+      header img {
+        width: 40px;
+      }
     }
   </style>
 </head>
@@ -108,7 +134,6 @@
   <div class="content">
     <nav>
       <a class="home-tab" onclick="showSection('home')">About</a>
-      <!-- Philosophy tab hidden -->
       <a class="solutions-tab" onclick="showSection('solutions')">Solutions</a>
       <a class="products-tab" onclick="showSection('products')">Products</a>
       <a class="careers-tab" onclick="showSection('careers')">Careers</a>
@@ -117,25 +142,25 @@
 
     <main>
       <section id="home" class="active">
-    <h2>About Us</h2>
-  <p>
-    Welcome to <strong>3Sedges</strong> — where clever code meets unapologetic fun.
-  </p>
-  <p>
-    We are a team of innovators, designers, and DSP experts on a mission to transform the way people experience games. Whether it’s through a laugh-out-loud mobile game on your phone or a late-night board game session with friends over drinks, our creations are crafted to spark joy, competition, and connection.
-  </p>
-  <p>
-    At 3Sedges, we fuse smart technology with bold creativity. Our roots in <strong>Digital Signal Processing (DSP)</strong> give us the edge to deliver responsive, high-performance gameplay, while our obsession with <strong>fun</strong> keeps us grounded in what matters most — the player experience.
-  </p>
-  <p>
-    From mobile mini-games that deliver maximum excitement to drinking games that ignite the party, our portfolio celebrates simplicity, spontaneity, and a little bit of chaos.
-  </p>
-  <p>
-    Why the name? <strong>3Sedges</strong> stands for "Free, Sharp, and on the Edge." "3" captures the spirit of freedom and play. "Sedges" hints at the cutting edge — unpredictable, bold, and never dull. Together, they define our commitment to boundary-breaking fun in every form.
-  </p>
-  <p>
-    So whether you're tapping your screen or raising your glass, you’re playing with purpose — you're playing with 3Sedges.
-  </p>
+        <h2>About Us</h2>
+        <p>
+          Welcome to <strong>3Sedges</strong> — where clever code meets unapologetic fun.
+        </p>
+        <p>
+          We are a team of innovators, designers, and DSP experts on a mission to transform the way people experience games.
+        </p>
+        <p>
+          Whether it’s a mobile game or a late-night party game, our creations are crafted to spark joy, competition, and connection.
+        </p>
+        <p>
+          At 3Sedges, we fuse smart technology with bold creativity. Our roots in <strong>Digital Signal Processing (DSP)</strong> give us the edge to deliver responsive, high-performance gameplay, while our obsession with <strong>fun</strong> keeps us focused on player experience.
+        </p>
+        <p>
+          Why the name? <strong>3Sedges</strong> stands for "Free, Sharp, and on the Edge." "3" captures the spirit of freedom and play. "Sedges" hints at the cutting edge — unpredictable, bold, and never dull.
+        </p>
+        <p>
+          So whether you're tapping your screen or raising your glass, you’re playing with purpose — you're playing with 3Sedges.
+        </p>
       </section>
 
       <section id="solutions">
@@ -144,73 +169,55 @@
           At <strong>3Sedges</strong>, we craft custom-made games designed to promote products, engage audiences, and build unforgettable brand experiences.
         </p>
         <p>
-          Whether you’re launching a new product, hosting an event, or looking to boost brand awareness, our team can design interactive mobile or physical games tailored to your goals. We blend sharp gameplay mechanics with your brand identity to deliver unique, memorable interactions that resonate with your audience.
-        </p>
-        <p>
-          From fast-paced digital games for marketing campaigns to gamified experiences for trade shows or social media engagement, 3Sedges turns your brand into something people don’t just see — they play with it, laugh with it, and remember it.
+          Whether launching a product, hosting an event, or boosting brand awareness, we design interactive games tailored to your goals — digital or physical.
         </p>
         <p>
           Let’s build something that’s not just on-brand — but on fire.
         </p>
       </section>
 
-
       <section id="products">
-  <h2>Our Product</h2>
-  <p>
-    <strong>Color Game</strong> is a digital adaptation of a traditional Filipino drinking game that has brought fun and excitement to countless social gatherings.
-    In the Philippines, Color Game is a staple at festivals and parties, known for its simple rules and lively atmosphere.
-  </p>
-  <p>
-    We've modernized this cultural favourite with smart visuals, responsive gameplay, and integrated multiplayer support — bringing the festive thrill of the streets to your mobile device.
-  </p>
-  <p>
-    Whether you're playing with friends or challenging strangers online, Color Game by 3Sedges offers a fresh spin on a timeless classic, with fair odds, vibrant design, and high-performance DSP at its core.
-  </p>
-<h3 style="color:#ef6c00; border-bottom: 2px solid #ffe0b2; padding-bottom: 10px; margin-top: 40px;">🎲 How to Play</h3>
-<p>
-  <strong>Color Game</strong> is a quick and exciting game of chance using colours and dice. It features two roles: <strong>Player</strong> and <strong>Banker</strong>.
-</p>
+        <h2>Our Product</h2>
+        <p>
+          <strong>Color Game</strong> is a digital version of a traditional Filipino drinking game — now supercharged for your phone.
+        </p>
+        <p>
+          Play solo, with friends, or strangers online. It's fair, vibrant, and fast.
+        </p>
 
-<div style="background-color:#fff8e1; padding: 20px; border-radius: 10px; margin: 20px 0;">
-  <h4 style="color:#ef6c00;">🧑‍🎮 Player Mode</h4>
-  <p>
-    🎯 Choose one or more colours to bet on.  
-    <br />
-    💰 Place your bet and wait for the roll.
-  </p>
-</div>
+        <h3 style="color:#ef6c00; border-bottom: 2px solid #ffe0b2; padding-bottom: 10px; margin-top: 40px;">🎲 How to Play</h3>
+        <p><strong>Color Game</strong> has two roles: <strong>Player</strong> and <strong>Banker</strong>.</p>
 
-<div style="background-color:#fff3e0; padding: 20px; border-radius: 10px; margin: 20px 0;">
-  <h4 style="color:#ef6c00;">🎲 Banker Mode</h4>
-  <p>
-    🧊 Roll 3 dice, each with 6 different colour faces.  
-    <br />
-    📦 The dice are rolled from a box to produce a random result.
-  </p>
-</div>
+        <div style="background-color:#fff8e1; padding: 20px; border-radius: 10px; margin: 20px 0;">
+          <h4 style="color:#ef6c00;">🧑‍🎮 Player Mode</h4>
+          <p>
+            🎯 Choose one or more colours to bet on.<br />
+            💰 Place your bet and wait for the roll.
+          </p>
+        </div>
 
-<h4 style="color:#ef6c00;">🏆 Winning & Payouts</h4>
-<p>
-  If your selected colour appears on:
-</p>
-<ul>
-  <li>🎉 1 die – you win 1x your bet</li>
-  <li>🎉🎉 2 dice – you win 2x your bet</li>
-  <li>🎉🎉🎉 3 dice – you win 3x your bet</li>
-</ul>
+        <div style="background-color:#fff3e0; padding: 20px; border-radius: 10px; margin: 20px 0;">
+          <h4 style="color:#ef6c00;">🎲 Banker Mode</h4>
+          <p>
+            🧊 Roll 3 dice, each with 6 colour faces.<br />
+            📦 Dice are rolled from a box for a random result.
+          </p>
+        </div>
 
-<p>
-  Simple rules, fast rounds, and endless fun — whether you’re playing for drinks, dares, or just bragging rights!
-</p>
-
- 
-</section>
-
+        <h4 style="color:#ef6c00;">🏆 Winning & Payouts</h4>
+        <ul>
+          <li>🎉 1 die – win 1× your bet</li>
+          <li>🎉🎉 2 dice – win 2× your bet</li>
+          <li>🎉🎉🎉 3 dice – win 3× your bet</li>
+        </ul>
+        <p>
+          Simple, fun, fast. Great for drinks, dares, or bragging rights.
+        </p>
+      </section>
 
       <section id="careers">
         <h2>Our Team</h2>
-        <p>We're a passionate and growing group of DSP innovators. Stay tuned for opportunities to join us!</p>
+        <p>We're a passionate and growing group of DSP innovators. Stay tuned for job opportunities!</p>
       </section>
 
       <section id="contact">
