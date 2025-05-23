@@ -55,72 +55,17 @@
       font-size: 1em;
       font-weight: bold;
       box-sizing: border-box;
-      cursor: pointer;
     }
 
     .home-tab { background-color: #f57c00; }
     .philosophy-tab { background-color: #fb8c00; display: none; }
     .solutions-tab { background-color: #ffa726; }
-    .products-tab {
-      background-color: #ffcc80;
-      color: #5d4037;
-      cursor: pointer;
-    }
+    .products-tab { background-color: #ffcc80; color: #5d4037; }
     .careers-tab { background-color: #ffb74d; }
     .contact-tab { background-color: #ffe0b2; color: #5d4037; }
 
     nav a:hover {
       background-color: #e65100 !important;
-    }
-
-    /* Dropdown container */
-    .dropdown {
-      position: relative;
-      flex: 1 1 50%;
-      text-align: center;
-      box-sizing: border-box;
-      font-weight: bold;
-    }
-
-    /* Dropdown content - hidden by default */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #fff3e0;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-      z-index: 1;
-      left: 0;
-      top: 100%;
-      border: 1px solid #ffe0b2;
-      border-radius: 0 0 8px 8px;
-    }
-
-    /* Dropdown content links */
-    .dropdown-content a {
-      color: #5d4037;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      font-weight: normal;
-      cursor: pointer;
-    }
-
-    /* Hover effects for dropdown links */
-    .dropdown-content a:hover {
-      background-color: #ffcc80;
-      color: #ef6c00;
-    }
-
-    /* Show the dropdown menu on hover */
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* Hover effect on Products tab */
-    .dropdown:hover > .products-tab {
-      background-color: #e65100 !important;
-      color: white;
     }
 
     main {
@@ -164,7 +109,7 @@
         font-size: 2em;
       }
 
-      nav a, .dropdown {
+      nav a {
         flex: 1 1 100%;
         font-size: 1em;
         padding: 12px 0;
@@ -176,20 +121,6 @@
 
       header img {
         width: 40px;
-      }
-
-      /* Dropdown content positioning for mobile */
-      .dropdown-content {
-        position: relative;
-        box-shadow: none;
-        border: none;
-        border-radius: 0;
-        min-width: auto;
-      }
-
-      /* Show dropdown content always on mobile for easier access */
-      .dropdown:hover .dropdown-content {
-        display: none;
       }
     }
   </style>
@@ -204,21 +135,13 @@
     <nav>
       <a class="home-tab" onclick="showSection('home')">About</a>
       <a class="solutions-tab" onclick="showSection('solutions')">Solutions</a>
-      
-      <div class="dropdown">
-        <a class="products-tab" href="javascript:void(0)">Products ▼</a>
-        <div class="dropdown-content">
-          <a onclick="showSection('products_games')">Games</a>
-          <a onclick="showSection('products_security')">Security Tools</a>
-        </div>
-      </div>
-
+      <a class="products-tab" onclick="showSection('products')">Products</a>
       <a class="careers-tab" onclick="showSection('careers')">Careers</a>
       <a class="contact-tab" onclick="showSection('contact')">Contact Us</a>
     </nav>
 
     <main>
-      <section id="home" class="active" style="display: block;">
+      <section id="home" class="active">
         <h2>About Us</h2>
         <p>
           Welcome to <strong>3Sedges</strong> — where clever code meets unapologetic fun.
@@ -253,7 +176,7 @@
         </p>
       </section>
 
-      <section id="products" style="display:none;">
+      <section id="products">
         <h2>Our Product</h2>
         <p>
           <strong>Color Game</strong> is a digital version of a traditional Filipino drinking game — now supercharged for your phone.
@@ -292,18 +215,6 @@
         </p>
       </section>
 
-      <section id="products_games" style="display:none;">
-        <h2>Games</h2>
-        <p>Explore our fun and innovative games designed to keep you entertained and engaged.</p>
-        <!-- Add more content about Games here -->
-      </section>
-
-      <section id="products_security" style="display:none;">
-        <h2>Security Tools</h2>
-        <p>Discover our powerful security tools to keep your data and systems safe and secure.</p>
-        <!-- Add more content about Security Tools here -->
-      </section>
-
       <section id="careers">
         <h2>Our Team</h2>
         <p>We're a passionate and growing group of DSP innovators. Stay tuned for job opportunities!</p>
@@ -325,14 +236,9 @@
       const sections = document.querySelectorAll("main section");
       sections.forEach(section => {
         section.classList.remove("active");
-        section.style.display = "none";
       });
-      const selected = document.getElementById(sectionId);
-      if (selected) {
-        selected.classList.add("active");
-        selected.style.display = "block";
-      }
+      document.getElementById(sectionId).classList.add("active");
     }
   </script>
 </body>
-</html>
+</html> 
